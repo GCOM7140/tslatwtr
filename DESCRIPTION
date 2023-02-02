@@ -1,0 +1,12 @@
+Package: tslatwtr
+Title: Tesla Twitter Data Package
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jeffrey", "Boichuk", , "jpboichuk@gmail.com", role = c("aut", "cre"))
+Description: Data related to the public conversation about Tesla on
+    Twitter.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
