@@ -1,0 +1,36 @@
+#' Tweet data
+#'
+#' Each row in this table is a tweet by a user in the \code{list_member} table.
+#' The tweets include the most recent 3,200 tweets by these users that were
+#' posted before March 1, 2023. The information provided indicates the date and
+#' time of a tweet, its text, the IDs of tweets it retweeted, quoted, or replied
+#' to, and the degree to which Twitter users engaged with it by viewing, liking,
+#' retweeting, quoting, and replying to it. You can join the tweet information
+#' in this table with rows in the other tables via the \code{user_id} and
+#' \code{tweet_id} variables to pair it with user metadata and more granular
+#' tweet information, respectively.
+#'
+#' @import tibble
+#' @format A tibble with the following variables (types) and definitions:
+#' \describe{
+#'   \item{created_at}{(POSIXct) Date and time when the tweet was posted, in EST.}
+#'   \item{text}{(character) Text content of the tweet.}
+#'   \item{impression_count}{(integer) Number of times the tweet has been viewed.}
+#'   \item{like_count}{(integer) Number of times the tweet has been liked.}
+#'   \item{retweet_count}{(integer) Number of times the tweet has been retweeted.}
+#'   \item{quote_count}{(integer) Number of times the tweet has been quote tweeted.}
+#'   \item{reply_count}{(integer) Number of times the tweet has been replied to.}
+#'   \item{reply_settings}{(character) Indicates who can reply to the tweet.}
+#'   \item{retweeted}{(character) Unique identifier for the tweet the tweet retweeted.}
+#'   \item{quoted}{(character) Unique identifier for the tweet the tweet quoted.}
+#'   \item{replied_to}{(character) Unique identifier for the tweet the tweet replied to.}
+#'   \item{in_reply_to_user_id}{(character) Unique identifier for the user the tweet replied to.}
+#'   \item{user_id}{(character) User ID for the user who posted the tweet.}
+#'   \item{conversation_id}{(character) Unique identifier for the original tweet of the conversation, including direct replies and replies of replies.}
+#'   \item{tweet_id}{(character) Unique identifier for the tweet.}
+#' }
+#' @source The \href{https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets}{Timelines} endpoint of the Twitter API.
+#' @examples
+#' # Display the `tweet` tibble in the console
+#' tweet
+"tweet"

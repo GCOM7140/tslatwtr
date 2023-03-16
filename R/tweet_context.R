@@ -1,0 +1,24 @@
+#' Tweet context data
+#'
+#' Each row in this table is a domain-entity pairing, inferred by Twitter, based
+#' on semantic analysis of a tweet's text (keywords, hashtags, handles, etc).
+#' Twitter describes the methodology it uses to infer tweet context
+#' \href{https://developer.twitter.com/en/docs/twitter-api/annotations/overview}{here}.
+#' You can join the domain and entity information in this table with the tweets
+#' in the \code{tweet} table via the \code{tweet_id} variable.
+#'
+#' @format A tibble with the following variables (types) and definitions:
+#' \describe{
+#'   \item{tweet_id}{(character) Unique identifier for the tweet.}
+#'   \item{domain_id}{(character) Unique identifier for the domain.}
+#'   \item{domain_name}{(character) Name of the domain.}
+#'   \item{domain_description}{(character) Description of the domain.}
+#'   \item{entity_id}{(character) Unique identifier for the entity.}
+#'   \item{entity_name}{(character) Name of the entity.}
+#'   \item{entity_description}{(character) Description of the entity.}
+#' }
+#' @source The \href{https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets}{Timelines} endpoint of the Twitter API.
+#' @examples
+#' # Display the `tweet_context` tibble in the console
+#' tweet_context
+"tweet_context"

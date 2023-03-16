@@ -1,0 +1,27 @@
+#' Tweet url data
+#'
+#' Each row in this table is a URL used in a tweet in the \code{tweet} table.
+#' You can join the position and url information in this table with rows in the
+#' \code{tweet} table via the \code{tweet_id} variable.
+#'
+#' @format A tibble with the following variables (types) and definitions:
+#' \describe{
+#'   \item{tweet_id}{(character) Unique identifier for the tweet.}
+#'   \item{start}{(character) Starting position of the URL (in characters).}
+#'   \item{end}{character) Ending position of the URL (in characters).}
+#'   \item{url}{(character) The URL in the format tweeted by the user.}
+#'   \item{expanded_url}{(character) The fully resolved URL.}
+#'   \item{display_url}{(character) The URL as displayed in the Twitter client.}
+#'   \item{media_key}{(character) Unique identifier for linked media.}
+#'   \item{images}{(list) Thumbnail image for linked media.}
+#'   \item{status}{(character) Link status.}
+#'   \item{title}{(character) Title of linked media.}
+#'   \item{description}{(character) Description of linked media.}
+#'   \item{unwound_url}{(character) The full destination URL.}
+#'   }
+#' @source The \href{https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets}{Timelines} endpoint of the Twitter API.
+#'
+#' @examples
+#' # Display the `tweet_url` tibble in the console
+#' tweet_url
+"tweet_url"
